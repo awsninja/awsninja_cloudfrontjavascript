@@ -7,7 +7,7 @@
  */
 
 
-require_once(NINJA_BASEPATH . 'awsninja_core/config.php');
+require_once(NINJA_BASEPATH . 'awsninja_cloudfrontjavascript/config.php');
 require_once(NINJA_BASEPATH . 'awsninja_core/db.php');
 
 class JavaScriptScript {

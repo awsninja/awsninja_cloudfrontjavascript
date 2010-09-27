@@ -28,14 +28,22 @@ for($i=0; $i<$jsCt; $i++)
 		$dest = fopen($pathDest, 'w');
 		$len = strlen($minJS);
 		fwrite($dest, $minJS);
-		fclose($dest);		
-		echo("Finished.\n");
+		fclose($dest);
 	}
 	else
 	{
 		echo("File not found: $pathSource\n");
 	}
+	usleep ( 250 );
 }
+
+echo("Deleting the version file\n");
+if (file_exists(CDN_VERSION_FILE))
+{
+	unlink(CDN_VERSION_FILE);
+}
+echo("Done!\n");
+
 
 
 ?>
